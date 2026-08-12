@@ -1,0 +1,40 @@
+import { defineProject } from './projectTemplate'
+
+export const projects = [
+  defineProject({
+    number: '01',
+    type: '3D / OBJECT STUDY',
+    title: 'Soft Machines',
+    slug: 'soft-machines',
+    description: 'Tactile forms exploring weight, tension, and impossible materials.',
+    tone: 'coral',
+    year: '2026',
+    role: 'Art direction · 3D design',
+    tools: 'Blender · Substance 3D',
+    statement: 'Soft Machines is an ongoing study of forms that sit somewhere between organism and object. Each piece begins as a simple polygonal system before being pushed, folded, and softened into something almost familiar.',
+  }),
+  defineProject({
+    number: '02',
+    type: 'WEB / SPATIAL',
+    title: 'Orbit Archive',
+    slug: 'orbit-archive',
+    description: 'A digital exhibition where objects live in an endlessly shifting constellation.',
+    tone: 'teal',
+    year: '2026',
+    role: 'Creative development · UX',
+    tools: 'Three.js · React',
+    statement: 'Orbit Archive imagines a portfolio without walls or pages. Visitors navigate a living constellation of work, discovering relationships through proximity, motion, and light.',
+  }),
+  defineProject({
+    number: '03',
+    type: '3D / ENVIRONMENT',
+    title: 'After Nature',
+    slug: 'after-nature',
+    description: 'Speculative flora grown from geometry, light, and controlled accidents.',
+    tone: 'gold',
+    year: '2025',
+    role: 'Concept · 3D environment',
+    tools: 'Blender · Houdini',
+    statement: 'After Nature looks for the organic inside procedural systems. The collection asks what plants might become when designed by algorithms for environments that do not yet exist.',
+  }),
+]
