@@ -1,0 +1,9 @@
+services:
+  astrolygon:
+    build:
+      context: .
+      target: production
+    image: astrolygon-portfolio:local
+    ports:
+      - "8080:80"
+    restart: unless-stopped
