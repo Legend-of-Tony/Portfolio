@@ -2,6 +2,20 @@ services:
   astrolygon:
     build:
       context: .
+      target: development
+    image: astrolygon-portfolio:dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+
+  astrolygon-production:
+    profiles: ["production"]
+    build:
+      context: .
       target: production
     image: astrolygon-portfolio:local
     ports:

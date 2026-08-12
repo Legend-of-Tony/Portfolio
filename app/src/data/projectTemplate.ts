@@ -6,11 +6,14 @@ export interface Project {
   title: string
   slug: string
   description: string
+  image: string
+  imageAlt: string
   tone: ProjectTone
   year: string
   role: string
   tools: string
   statement: string
+  breakdown: string
 }
 
 export const projectToneClasses: Record<ProjectTone, string> = {

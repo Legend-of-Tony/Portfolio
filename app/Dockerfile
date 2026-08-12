@@ -1,10 +1,22 @@
-# Build the Vite application with Bun.
-FROM oven/bun:1.3.14-alpine AS build
+# Install dependencies once and reuse them in the development and build stages.
+FROM oven/bun:1.3.14-alpine AS dependencies
 
 WORKDIR /app
 
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
+
+# Run Vite for local development with hot reload.
+FROM dependencies AS development
+
+COPY . .
+
+EXPOSE 5173
+
+CMD ["bun", "run", "dev", "--", "--host", "0.0.0.0"]
+
+# Build the optimized application for production.
+FROM dependencies AS build
 
 COPY . .
 RUN bun run build
