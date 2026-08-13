@@ -83,7 +83,7 @@ export default function App() {
               The practice is evolving through character studies, semi-realistic materials, environment design, and spatial websites.
             </p>
           </div>
-          <a className="flex justify-between border-b pb-4 label-style" href="mailto:hello@astrolygon.com">
+          <a className="flex justify-between border-b pb-4 label-style" href="mailto:antonyangoco@gmail.com">
             Have a strange idea?
             <span className="text-gold">
               Let’s talk ↗
